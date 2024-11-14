@@ -2,82 +2,82 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Ryan的个人博客</title>
-        <link>http://localhost:1313/categories/</link>
+        <link>https://ryanl1nk.github.io/categories/</link>
         <description>Recent content in Categories on Ryan的个人博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Ryan</copyright>
-        <lastBuildDate>Tue, 05 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 14 Nov 2024 16:35:30 +0800</lastBuildDate><atom:link href="https://ryanl1nk.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Cloudflare</title>
-        <link>http://localhost:1313/categories/cloudflare/</link>
+        <link>https://ryanl1nk.github.io/categories/cloudflare/</link>
         <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/cloudflare/</guid>
+        <guid>https://ryanl1nk.github.io/categories/cloudflare/</guid>
         <description></description>
         </item>
         <item>
         <title>Git</title>
-        <link>http://localhost:1313/categories/git/</link>
+        <link>https://ryanl1nk.github.io/categories/git/</link>
         <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/git/</guid>
+        <guid>https://ryanl1nk.github.io/categories/git/</guid>
         <description></description>
         </item>
         <item>
         <title>Stack</title>
-        <link>http://localhost:1313/categories/stack/</link>
+        <link>https://ryanl1nk.github.io/categories/stack/</link>
         <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/stack/</guid>
+        <guid>https://ryanl1nk.github.io/categories/stack/</guid>
         <description></description>
         </item>
         <item>
         <title>博客搭建</title>
-        <link>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+        <link>https://ryanl1nk.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
         <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+        <guid>https://ryanl1nk.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
         <description></description>
         </item>
         <item>
         <title>健身</title>
-        <link>http://localhost:1313/categories/%E5%81%A5%E8%BA%AB/</link>
+        <link>https://ryanl1nk.github.io/categories/%E5%81%A5%E8%BA%AB/</link>
         <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/%E5%81%A5%E8%BA%AB/</guid>
+        <guid>https://ryanl1nk.github.io/categories/%E5%81%A5%E8%BA%AB/</guid>
         <description></description>
         </item>
         <item>
         <title>Syntax</title>
-        <link>http://localhost:1313/categories/syntax/</link>
+        <link>https://ryanl1nk.github.io/categories/syntax/</link>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/syntax/</guid>
+        <guid>https://ryanl1nk.github.io/categories/syntax/</guid>
         <description></description>
         </item>
         <item>
         <title>Themes</title>
-        <link>http://localhost:1313/categories/themes/</link>
+        <link>https://ryanl1nk.github.io/categories/themes/</link>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/themes/</guid>
+        <guid>https://ryanl1nk.github.io/categories/themes/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Test With Whitespaces</title>
+        <link>https://ryanl1nk.github.io/categories/test-with-whitespaces/</link>
+        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://ryanl1nk.github.io/categories/test-with-whitespaces/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>http://localhost:1313/categories/test/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://ryanl1nk.github.io/categories/test/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/test/</guid>
-        <description>&lt;img src="http://localhost:1313/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
-        </item>
-        <item>
-        <title>Test With Whitespaces</title>
-        <link>http://localhost:1313/categories/test-with-whitespaces/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/test-with-whitespaces/</guid>
-        <description></description>
+        <guid>https://ryanl1nk.github.io/categories/test/</guid>
+        <description>&lt;img src="https://ryanl1nk.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         
     </channel>
