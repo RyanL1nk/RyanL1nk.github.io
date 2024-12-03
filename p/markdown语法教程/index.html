@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="如何在Markdown中写出数学公式以及表格">
+<title>Markdown语法教程</title>
+
+<link rel='canonical' href='https://ryanl1nk.github.io/p/markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/'>
+
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Markdown语法教程">
+<meta property='og:description' content="如何在Markdown中写出数学公式以及表格">
+<meta property='og:url' content='https://ryanl1nk.github.io/p/markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/'>
+<meta property='og:site_name' content='Ryan的个人博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-12-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-03T21:03:47&#43;08:00'/><meta property='og:image' content='https://ryanl1nk.github.io/img/markdown.jpg' />
+<meta name="twitter:title" content="Markdown语法教程">
+<meta name="twitter:description" content="如何在Markdown中写出数学公式以及表格"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://ryanl1nk.github.io/img/markdown.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/logo_hu14201913832902288923.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🥰</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Ryan的个人博客</a></h1>
+            <h2 class="site-description">不定期随缘更新</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/RyanL1nk'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#常用latex公式语法">常用LaTeX公式语法</a></li>
+        <li><a href="#1-使用美元符号表示公式">1. 使用美元符号表示公式</a></li>
+        <li><a href="#2-使用工具支持的数学公式">2. 使用工具支持的数学公式</a>
+          <ol>
+            <li><a href="#obsidian">Obsidian</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#jupyter-notebook">Jupyter Notebook</a></li>
+            <li><a href="#hugo-支持-mathjax-或-katex"><strong>Hugo (支持 MathJax 或 KaTeX)</strong></a></li>
+          </ol>
+        </li>
+        <li><a href="#3-注意事项">3. 注意事项</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#基本表格语法">基本表格语法</a>
+          <ol>
+            <li><a href="#示例">示例：</a></li>
+          </ol>
+        </li>
+        <li><a href="#表格对齐">表格对齐</a>
+          <ol>
+            <li><a href="#示例-1"><strong>示例：</strong></a></li>
+          </ol>
+        </li>
+        <li><a href="#注意事项">注意事项</a></li>
+        <li><a href="#多行表格换行">多行表格（换行）</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/">
+                
+                    <img src="/img/markdown.jpg" loading="lazy" alt="Featured image of post Markdown语法教程" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/markdown/" >
+                Markdown
+            </a>
+            <style>
+                .article-time--updated,
+                .article-time-label,
+                .article-time--published {
+                    display: inline;
+                    vertical-align: middle;
+                    margin: 0;
+                }
+            </style>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/">Markdown语法教程</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            如何在Markdown中写出数学公式以及表格
+        </h3>
+        
+    </div>
+
+    
+        <footer class="article-time">
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published">2024-12-3</time>
+                </div>
+            
+
+            
+            
+                        最后修改:
+                        <time class="article-time--updated" datetime="2024-12-03 21:03:47.9480494 &#43;0800 CST" title="2024-12-03 21:03:47.9480494 &#43;0800 CST">
+                            2024-12-03
+                        </time>
+
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 3 分钟
+                    </time>
+                </div>
+            
+        </footer>
+    
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="一--基础公式">一  基础公式
+</h1><ul>
+<li>
+<p>内联公式$E = mc^2$</p>
+</li>
+<li>
+<p>块级公式： </p>
+$$ E = mc^2 $$<p>
+这是一个公式：$a^2 + b^2 = c^2$
+</p>
+$$ 
+\int_a^b f(x) \, dx = F(b) - F(a) 
+$$<p>
+这是一个分式：$a^2 + b^2 = c^2$
+</p>
+$$ \frac{a}{b}$$</li>
+</ul>
+<h3 id="常用latex公式语法">常用LaTeX公式语法
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>功能</th>
+          <th>语法</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>上标/下标</td>
+          <td><code>a^b</code> / <code>a_b</code></td>
+          <td>$a^2$ 或 $a_1$</td>
+      </tr>
+      <tr>
+          <td>分数</td>
+          <td><code>\frac{a}{b}</code></td>
+          <td>$\frac{1}{2}$</td>
+      </tr>
+      <tr>
+          <td>开方</td>
+          <td><code>\sqrt{x}</code></td>
+          <td>$\sqrt{2}$</td>
+      </tr>
+      <tr>
+          <td>求和</td>
+          <td><code>\sum_{i=1}^n</code></td>
+          <td>$\sum_{i=1}^n i$</td>
+      </tr>
+      <tr>
+          <td>积分</td>
+          <td><code>\int_a^b</code></td>
+          <td>$\int_a^b f(x) , dx$</td>
+      </tr>
+      <tr>
+          <td>矢量/粗体</td>
+          <td><code>\vec{v}</code> / <code>\mathbf{v}</code></td>
+          <td>$\vec{v}$ 或 $\mathbf{v}$</td>
+      </tr>
+      <tr>
+          <td>希腊字母</td>
+          <td><code>\alpha</code>, <code>\beta</code>, <code>\gamma</code> 等</td>
+          <td>$\alpha$, $\beta$, $\gamma$</td>
+      </tr>
+      <tr>
+          <td>符号</td>
+          <td><code>\infty</code>, <code>\approx</code>, <code>\neq</code>, <code>\leq</code> 等</td>
+          <td>$\infty$, $\approx$, $\neq$, $\leq$</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<p>在Markdown中插入数学公式可以使用LaTeX语法。Markdown本身不支持原生的数学公式渲染，但许多支持Markdown的工具（如Obsidian、Hugo、Typora、Jupyter Notebook、GitHub README等）提供了额外的支持。以下是具体的方法：</p>
+<hr>
+<h3 id="1-使用美元符号表示公式">1. 使用美元符号表示公式
+</h3><ul>
+<li>单个美元符号 <code>$...$</code>：内联公式。</li>
+<li>双美元符号 <code>$$...$$</code>：块级公式。</li>
+</ul>
+<p><strong>示例</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">这是一个内联公式：$E = mc^2$
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">这是一个块级公式：
+</span></span><span class="line"><span class="cl">$$
+</span></span><span class="line"><span class="cl">E = mc^2
+</span></span><span class="line"><span class="cl">$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>效果</strong>： 这是一个内联公式：$E = mc^2$</p>
+<p>这是一个块级公式：
+</p>
+$$E=mc^2$$<hr>
+<h3 id="2-使用工具支持的数学公式">2. 使用工具支持的数学公式
+</h3><h4 id="obsidian">Obsidian
+</h4><ul>
+<li>
+<p>Obsidian原生支持LaTeX公式，只需要使用上述 <code>$...$</code> 或 <code>$$...$$</code> 的方式即可。</p>
+</li>
+<li>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">这是一个公式：$a^2 + b^2 = c^2$
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$$ 
+</span></span><span class="line"><span class="cl">\int_a^b f(x) \, dx = F(b) - F(a) 
+</span></span><span class="line"><span class="cl">$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="github">GitHub
+</h4><ul>
+<li>
+<p>GitHub的Markdown不直接支持LaTeX公式，可以借助HTML或图片。</p>
+</li>
+<li>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://latex.codecogs.com/svg.latex?E=mc^2&#34;</span> <span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="jupyter-notebook">Jupyter Notebook
+</h4><ul>
+<li>使用 <code>Markdown</code> 单元格，直接输入 <code>$...$</code> 或 <code>$$...$$</code>，可以渲染公式。</li>
+</ul>
+<h4 id="hugo-支持-mathjax-或-katex"><strong>Hugo (支持 MathJax 或 KaTeX)</strong>
+</h4><ol>
+<li>在站点配置文件中启用MathJax或KaTeX。</li>
+<li>使用 <code>$...$</code> 和 <code>$$...$$</code> 语法。</li>
+</ol>
+<hr>
+<h3 id="3-注意事项">3. 注意事项
+</h3><ul>
+<li><strong>渲染支持</strong>：确保所使用的Markdown编辑器或网站支持数学公式。如果不支持，可能需要额外配置（如引入MathJax或KaTeX）。</li>
+<li><strong>格式要求</strong>：内联公式和块级公式不能混淆，避免语法解析错误。</li>
+</ul>
+<h1 id="二--表格语法">二  表格语法
+</h1><p>在Markdown中，表格的语法相对简单。你可以使用竖线 (<code>|</code>) 和短横线 (<code>-</code>) 来创建表格。以下是详细的写法和示例。</p>
+<hr>
+<h3 id="基本表格语法">基本表格语法
+</h3><ol>
+<li>表头和内容之间用 <code>-</code> 分隔。</li>
+<li>每列用竖线 <code>|</code> 分隔。</li>
+<li>表格的对齐方式通过冒号 <code>:</code> 来指定。</li>
+</ol>
+<h4 id="示例">示例：
+</h4><p>markdown</p>
+<p>复制代码</p>
+<p><code>| 姓名   | 年龄 | 城市    | |--------|------|---------| | Alice  | 30   | 北京    | | Bob    | 25   | 上海    | | Charlie| 35   | 广州    |</code></p>
+<p>*渲染效果：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>城市</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Alice</td>
+          <td>30</td>
+          <td>北京</td>
+      </tr>
+      <tr>
+          <td>Bob</td>
+          <td>25</td>
+          <td>上海</td>
+      </tr>
+      <tr>
+          <td>Charlie</td>
+          <td>35</td>
+          <td>广州</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="表格对齐">表格对齐
+</h3><p>Markdown支持表格内容的对齐。通过在分隔符行中使用冒号来设置列的对齐方式。</p>
+<ul>
+<li><strong>左对齐</strong>：在分隔符行的左侧加上冒号 <code>:---</code></li>
+<li><strong>右对齐</strong>：在分隔符行的右侧加上冒号 <code>---:</code></li>
+<li><strong>居中对齐</strong>：在分隔符行的两侧加上冒号 <code>:---:</code></li>
+</ul>
+<h4 id="示例-1"><strong>示例：</strong>
+</h4><p>markdown</p>
+<p>复制代码</p>
+<p><code>| 姓名   | 年龄 | 城市    | |:-------|-----:|:-------:| | Alice  |  30  | 北京    | | Bob    |  25  | 上海    | | Charlie|  35  | 广州    |</code></p>
+<p><strong>渲染效果：</strong></p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>城市</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Alice</td>
+          <td>30</td>
+          <td>北京</td>
+      </tr>
+      <tr>
+          <td>Bob</td>
+          <td>25</td>
+          <td>上海</td>
+      </tr>
+      <tr>
+          <td>Charlie</td>
+          <td>35</td>
+          <td>广州</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="注意事项">注意事项
+</h3><ol>
+<li>表格中每一列的宽度不需要精确对齐，Markdown会自动处理。</li>
+<li>可以在表头行和分隔行之间添加空格来提高可读性，但这些空格不会影响渲染效果。</li>
+</ol>
+<hr>
+<h3 id="多行表格换行">多行表格（换行）
+</h3><p>如果表格中的某个单元格内容较长，你可以使用HTML标签 <code>&lt;br&gt;</code> 实现换行：</p>
+<p>markdown</p>
+<p>复制代码</p>
+<p><code>| 姓名   | 年龄 | 地址           | |--------|------|----------------| | Alice  | 30   | 北京 &lt;br&gt; 北京市 | | Bob    | 25   | 上海           |</code></p>
+<p>*渲染效果：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>地址</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Alice</td>
+          <td>30</td>
+          <td>北京  <br>北京市</td>
+      </tr>
+      <tr>
+          <td>Bob</td>
+          <td>25</td>
+          <td>上海</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>通过这些简单的语法，可以在Markdown中快速创建和自定义表格。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2024-12-3 21:03 CST
+        </span>
+    </section></footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/markdown-syntax-guide/">
+        
+        
+            <div class="article-image">
+                <img src="/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.c514d916917173a48a42e0114b469961_hu7626638945853200361.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Markdown Syntax Guide"
+                        
+                        data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown Syntax Guide</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Ryan
+    </section>
+    
+    <section class="powerby">
+        
+            Hello <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
